@@ -1,0 +1,17 @@
+{
+  "node": {
+    "40d26a67805fca0ada9ef01356a04b27c18252e9a0": {
+      "workers": {
+        "app/layering-guide/page": {
+          "moduleId": "[project]/.next-internal/server/app/layering-guide/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/ai/flows/scent-layering-guide.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/layering-guide/page": "action-browser"
+      }
+    }
+  },
+  "edge": {},
+  "encryptionKey": "FNTamrtzjv66C0IqJuBz66vY6XNrO60Qjkcjk7+0b0s="
+}

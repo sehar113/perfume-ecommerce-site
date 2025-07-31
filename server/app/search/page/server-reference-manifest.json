@@ -1,0 +1,16 @@
+{
+  "node": {
+    "40c586d01a32009b167db98147da14fc6029d42f70": {
+      "workers": {
+        "app/search/page": {
+          "moduleId": "[project]/.next-internal/server/app/search/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/ai/flows/search-products.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/search/page": "action-browser"
+      }
+    }
+  },
+  "edge": {}
+}

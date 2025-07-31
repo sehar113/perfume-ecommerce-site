@@ -1,0 +1,75 @@
+/* [project]/app/success-alert.css [app-client] (css) */
+.success-alert {
+  box-sizing: border-box;
+  background-color: hsl(var(--card));
+  border-radius: 8px;
+  justify-content: space-around;
+  align-items: center;
+  gap: 15px;
+  width: 330px;
+  height: 80px;
+  padding: 10px 15px;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 24px #959da533;
+}
+
+.success-alert .wave {
+  width: 80px;
+  fill: hsl(var(--primary) / .1);
+  position: absolute;
+  top: 32px;
+  left: -31px;
+  transform: rotate(90deg);
+}
+
+.success-alert .icon-container {
+  background-color: hsl(var(--primary) / .2);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  margin-left: 8px;
+  display: flex;
+}
+
+.success-alert .icon {
+  width: 17px;
+  height: 17px;
+  color: hsl(var(--primary));
+}
+
+.success-alert .message-text-container {
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: flex-start;
+  display: flex;
+}
+
+.success-alert .message-text, .success-alert .sub-text {
+  cursor: default;
+  margin: 0;
+}
+
+.success-alert .message-text {
+  color: hsl(var(--primary));
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.success-alert .sub-text {
+  color: hsl(var(--muted-foreground));
+  font-size: 14px;
+}
+
+.success-alert .cross-icon {
+  width: 18px;
+  height: 18px;
+  color: hsl(var(--muted-foreground));
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=app_success-alert_css_f9ee138c._.single.css.map*/

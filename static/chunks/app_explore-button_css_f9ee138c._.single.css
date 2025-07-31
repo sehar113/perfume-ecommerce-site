@@ -1,0 +1,417 @@
+/* [project]/app/explore-button.css [app-client] (css) */
+.explore-button-container .button {
+  --white: hsl(var(--primary-foreground));
+  --purple-100: hsl(var(--primary) / .7);
+  --purple-200: hsl(var(--primary) / .8);
+  --purple-300: hsl(var(--primary) / .9);
+  --purple-400: hsl(var(--primary));
+  --purple-500: hsl(var(--primary) / .6);
+  --radius: 18px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  letter-spacing: -1px;
+  background: none;
+  border: 0;
+  outline: none;
+  width: 280px;
+  height: 80px;
+  font-family: Arial;
+  font-size: 23px;
+  position: relative;
+  transform: rotate(358deg)skewX(4deg);
+}
+
+.explore-button-container .bg {
+  border-radius: inherit;
+  filter: blur(1px);
+  position: absolute;
+  inset: 0;
+}
+
+.explore-button-container .bg:before, .explore-button-container .bg:after {
+  content: "";
+  border-radius: calc(var(--radius) * 1.1);
+  background: var(--purple-500);
+  position: absolute;
+  inset: 0;
+}
+
+.explore-button-container .bg:before {
+  filter: blur(5px);
+  transition: all .3s;
+}
+
+.explore-button-container .wrap {
+  border-radius: inherit;
+  background: linear-gradient(to bottom, var(--purple-100) 0%, var(--purple-400) 100%);
+  height: 100%;
+  padding: 3px;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+  transform: translate(6px, -6px);
+}
+
+.explore-button-container .outline {
+  opacity: 0;
+  border-radius: inherit;
+  outline: none;
+  transition: all .4s;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.explore-button-container .outline:before {
+  content: "";
+  background: linear-gradient(to right, #0000 0%, #fff 50%, #0000 100%);
+  width: 120px;
+  height: 300px;
+  margin: auto;
+  animation: 3s linear infinite paused spin;
+  position: absolute;
+  inset: 2px;
+}
+
+.explore-button-container .content {
+  pointer-events: none;
+  z-index: 1;
+  border-radius: calc(var(--radius) * .85);
+  background: linear-gradient(to bottom, var(--purple-300) 0%, var(--purple-400) 100%);
+  height: 100%;
+  box-shadow: inset -2px 12px 11px -5px var(--purple-200), inset 1px -3px 11px 0px #00000059;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  font-weight: 600;
+  transition: all .3s;
+  display: flex;
+  position: relative;
+}
+
+.explore-button-container .content:before {
+  content: "";
+  z-index: 10;
+  opacity: .7;
+  background: linear-gradient(to bottom, transparent, var(--purple-400));
+  filter: brightness(1.3) blur(5px);
+  width: 80%;
+  margin: auto;
+  position: absolute;
+  inset: 45% 0 35%;
+}
+
+.explore-button-container .char {
+  justify-content: center;
+  align-items: center;
+  transition: all .3s;
+  display: flex;
+}
+
+.explore-button-container .char span {
+  color: #0000;
+  display: block;
+  position: relative;
+}
+
+.explore-button-container .char span:nth-child(5) {
+  margin-left: 5px;
+}
+
+.explore-button-container .char.state-1 span:nth-child(5) {
+  margin-right: -3px;
+}
+
+.explore-button-container .char.state-1 span {
+  animation: charAppear 1.2s ease backwards calc(var(--i) * 30ms);
+}
+
+.explore-button-container .char.state-1 span:before, .explore-button-container .char span:after {
+  content: attr(data-label);
+  color: var(--white);
+  text-shadow: -1px 1px 2px var(--purple-500);
+  position: absolute;
+  left: 0;
+}
+
+.explore-button-container .char span:before {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.explore-button-container .char.state-2 {
+  position: absolute;
+  left: 80px;
+}
+
+.explore-button-container .char.state-2 span:after {
+  opacity: 1;
+}
+
+.explore-button-container .icon {
+  z-index: 10;
+  animation: .8s cubic-bezier(.7, -.5, .3, 1.2) forwards resetArrow;
+}
+
+.explore-button-container .icon div, .explore-button-container .icon div:before, .explore-button-container .icon div:after {
+  background-color: var(--white);
+  border-radius: 1px;
+  height: 3px;
+}
+
+.explore-button-container .icon div:before, .explore-button-container .icon div:after {
+  content: "";
+  transform-origin: 100%;
+  border-radius: 15px;
+  width: 14px;
+  transition: all .3s;
+  position: absolute;
+  right: 0;
+}
+
+.explore-button-container .icon div {
+  width: 24px;
+  box-shadow: -2px 2px 5px var(--purple-400);
+  background: linear-gradient(to bottom, var(--white), var(--purple-100));
+  animation: 1s ease-in-out infinite paused swingArrow;
+  position: relative;
+  transform: scale(.9);
+}
+
+.explore-button-container .icon div:before {
+  box-shadow: 1px -2px 3px -1px var(--purple-400);
+  animation: 1s linear infinite paused rotateArrowLine;
+  top: 1px;
+  transform: rotate(44deg);
+}
+
+.explore-button-container .icon div:after {
+  box-shadow: -2px 2px 3px 0 var(--purple-400);
+  background: linear-gradient(200deg, var(--white), var(--purple-100));
+  animation: 1s linear infinite paused rotateArrowLine2;
+  bottom: 1px;
+  transform: rotate(316deg);
+}
+
+.explore-button-container .path {
+  z-index: 12;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150px;
+  pointer-events: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.explore-button-container .splash {
+  pointer-events: none;
+  stroke-dasharray: 60 60;
+  stroke-dashoffset: 60px;
+  stroke: var(--purple-300);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-17%, -31%);
+}
+
+.explore-button-container .button:hover .words {
+  opacity: 1;
+}
+
+.explore-button-container .button:hover .words span {
+  animation-play-state: running;
+}
+
+.explore-button-container .button:hover .char.state-1 span:before {
+  animation: charAppear .7s ease calc(var(--i) * 30ms);
+}
+
+.explore-button-container .button:hover .char.state-1 span:after {
+  opacity: 1;
+  animation: charDisappear .7s ease calc(var(--i) * 30ms);
+}
+
+.explore-button-container .button:hover .wrap {
+  transform: translate(8px, -8px);
+}
+
+.explore-button-container .button:hover .outline {
+  opacity: 1;
+}
+
+.explore-button-container .button:hover .outline:before, .explore-button-container .button:hover .icon div:before, .explore-button-container .button:hover .icon div:after, .explore-button-container .button:hover .icon div {
+  animation-play-state: running;
+}
+
+.explore-button-container .button:active .bg:before {
+  filter: blur(5px);
+  opacity: .7;
+}
+
+.explore-button-container .button:active .content {
+  box-shadow: inset -1px 12px 8px -5px #47008966, inset 0px -3px 8px 0px var(--purple-200);
+}
+
+.explore-button-container .button:active .words, .explore-button-container .button:active .outline {
+  opacity: 0;
+}
+
+.explore-button-container .button:active .wrap {
+  transform: translate(3px, -3px);
+}
+
+.explore-button-container .button:active .splash {
+  animation: .8s cubic-bezier(.3, 0, 0, 1) 50ms forwards splash;
+}
+
+.explore-button-container .button:focus .path {
+  animation: 1.6s .2s forwards path;
+}
+
+.explore-button-container .button:focus .icon {
+  animation: 1s cubic-bezier(.7, -.5, .3, 1.5) forwards arrow;
+}
+
+.explore-button-container .char.state-2 span:after, .explore-button-container .button:focus .char.state-1 span {
+  animation: charDisappear .5s ease forwards calc(var(--i) * 30ms);
+}
+
+.explore-button-container .button:focus .char.state-2 span:after {
+  animation: charAppear 1s ease backwards calc(var(--i) * 30ms);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes charAppear {
+  0% {
+    opacity: 0;
+    filter: blur(20px);
+    transform: translateY(50%);
+  }
+
+  20% {
+    opacity: 1;
+    transform: translateY(70%);
+  }
+
+  50% {
+    opacity: 1;
+    filter: blur();
+    transform: translateY(-15%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes charDisappear {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    filter: blur(3px);
+    transform: translateY(-70%);
+  }
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+
+  51% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(-128px);
+  }
+}
+
+@keyframes swingArrow {
+  50% {
+    transform: translateX(5px)scale(.9);
+  }
+}
+
+@keyframes rotateArrowLine {
+  50% {
+    transform: rotate(30deg);
+  }
+
+  80% {
+    transform: rotate(55deg);
+  }
+}
+
+@keyframes rotateArrowLine2 {
+  50% {
+    transform: rotate(330deg);
+  }
+
+  80% {
+    transform: rotate(300deg);
+  }
+}
+
+@keyframes resetArrow {
+  0% {
+    transform: translateX(-128px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes path {
+  from {
+    stroke: #fff;
+  }
+
+  to {
+    stroke-dashoffset: -480px;
+    stroke: #f9c6fe;
+  }
+}
+
+@keyframes splash {
+  to {
+    stroke-dasharray: 2 60;
+    stroke-dashoffset: -60px;
+  }
+}
+
+@media (width <= 767px) {
+  .explore-button-container {
+    margin-top: 0;
+    transform: scale(.4);
+  }
+
+  .explore-button-container .button {
+    transform: none;
+  }
+}
+
+/*# sourceMappingURL=app_explore-button_css_f9ee138c._.single.css.map*/

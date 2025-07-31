@@ -1,0 +1,87 @@
+/* [project]/app/learn-more-button.css [app-client] (css) */
+.learn-more-button {
+  cursor: pointer;
+  vertical-align: middle;
+  font-size: inherit;
+  background: none;
+  border: 0;
+  outline: none;
+  padding: 0;
+  font-family: inherit;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+.learn-more-button.learn-more {
+  width: 12rem;
+  height: auto;
+}
+
+.learn-more-button.learn-more .circle {
+  background: hsl(var(--foreground));
+  border-radius: 1.625rem;
+  width: 3rem;
+  height: 3rem;
+  margin: 0;
+  transition: all .45s cubic-bezier(.65, 0, .076, 1);
+  display: block;
+  position: relative;
+}
+
+.learn-more-button.learn-more .circle .icon {
+  background: hsl(var(--background));
+  margin: auto;
+  transition: all .45s cubic-bezier(.65, 0, .076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.learn-more-button.learn-more .circle .icon.arrow {
+  background: none;
+  width: 1.125rem;
+  height: .125rem;
+  transition: all .45s cubic-bezier(.65, 0, .076, 1);
+  left: .625rem;
+}
+
+.learn-more-button.learn-more .circle .icon.arrow:before {
+  content: "";
+  border-top: .125rem solid hsl(var(--background));
+  border-right: .125rem solid hsl(var(--background));
+  width: .625rem;
+  height: .625rem;
+  position: absolute;
+  top: -.29rem;
+  right: .0625rem;
+  transform: rotate(45deg);
+}
+
+.learn-more-button.learn-more .button-text {
+  color: hsl(var(--foreground));
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 0 0 1.85rem;
+  padding: .75rem 0;
+  font-weight: 700;
+  line-height: 1.6;
+  transition: all .45s cubic-bezier(.65, 0, .076, 1);
+  position: absolute;
+  inset: 0;
+}
+
+.learn-more-button:hover .circle {
+  width: 100%;
+}
+
+.learn-more-button:hover .circle .icon.arrow {
+  background: hsl(var(--background));
+  transform: translate(1rem);
+}
+
+.learn-more-button:hover .button-text {
+  color: hsl(var(--background));
+}
+
+/*# sourceMappingURL=app_learn-more-button_css_f9ee138c._.single.css.map*/

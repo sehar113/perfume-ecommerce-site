@@ -1,0 +1,83 @@
+/* [project]/app/order-alert.css [app-client] (css) */
+.order-alert-container {
+  flex-direction: column;
+  gap: 1rem;
+  width: 320px;
+  height: auto;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  display: flex;
+}
+
+.order-alert .flex {
+  display: flex;
+}
+
+.order-alert .flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.order-alert .success {
+  background-color: hsl(var(--secondary));
+  border-radius: .375rem;
+  padding: 1rem;
+}
+
+.order-alert .succes-svg {
+  color: hsl(var(--primary));
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.order-alert .success-prompt-wrap {
+  margin-left: .75rem;
+}
+
+.order-alert .success-prompt-heading {
+  color: hsl(var(--primary));
+  font-weight: bold;
+}
+
+.order-alert .success-prompt-prompt {
+  color: hsl(var(--secondary-foreground));
+  margin-top: .5rem;
+}
+
+.order-alert .success-button-container {
+  margin: .875rem -.5rem -.375rem;
+  display: flex;
+}
+
+.order-alert .success-button-main {
+  background-color: hsl(var(--primary) / .1);
+  color: hsl(var(--primary));
+  cursor: pointer;
+  border: none;
+  border-radius: .375rem;
+  padding: .375rem .5rem;
+  font-size: .875rem;
+  font-weight: bold;
+  line-height: 1.25rem;
+}
+
+.order-alert .success-button-main:hover {
+  background-color: hsl(var(--primary) / .2);
+}
+
+.order-alert .success-button-secondary {
+  color: hsl(var(--muted-foreground));
+  cursor: pointer;
+  background-color: #0000;
+  border: none;
+  border-radius: .375rem;
+  margin-left: .75rem;
+  padding: .375rem .5rem;
+  font-size: .875rem;
+  line-height: 1.25rem;
+}
+
+.order-alert .success-button-secondary:hover {
+  color: hsl(var(--foreground));
+}
+
+/*# sourceMappingURL=app_order-alert_css_f9ee138c._.single.css.map*/
