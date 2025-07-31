@@ -67,9 +67,9 @@ export default function StoryPage() {
                 </div>
                 <div className="rounded-lg overflow-hidden shadow-2xl md:order-1">
                     <Image
-                        src="/ourstory/sehar.jpg"
-                        alt="Sehar, the visionary behind the perfume brand"
-                        data-ai-hint="woman portrait"
+                        src="/ourstory/sulman.jpg"
+                        alt="Sulman "
+                        data-ai-hint="man portrait"
                         width={800}
                         height={1000}
                         className="w-full h-full object-cover"
