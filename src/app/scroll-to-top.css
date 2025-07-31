@@ -1,0 +1,4 @@
+
+/* No custom CSS needed if using Tailwind classes directly in the component */
+/* The file is created to be consistent with the plan, but can be left empty */
+/* All styling is handled via Tailwind's `cn` utility in ScrollToTopButton.tsx */

@@ -1,0 +1,42 @@
+
+/* Adapted from Uiverse.io by andrew-demchenk0 for this project */
+.error-alert {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 320px;
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  background: hsl(var(--destructive));
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px -3px #111;
+  color: hsl(var(--destructive-foreground));
+}
+
+.error-alert__icon {
+  width: 20px;
+  height: 20px;
+  transform: translateY(-2px);
+  margin-right: 8px;
+}
+
+.error-alert__icon path {
+  fill: hsl(var(--destructive-foreground));
+}
+
+.error-alert__title {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.error-alert__close {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.error-alert__close path {
+  fill: hsl(var(--destructive-foreground));
+}
