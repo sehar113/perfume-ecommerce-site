@@ -1,9 +1,10 @@
 
-import type {NextConfig} from 'next';
+import type { NextConfig } from 'next';
 require('dotenv').config()
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: 'export',
+  distDir: 'build',
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -11,6 +12,7 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',

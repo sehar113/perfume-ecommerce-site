@@ -1,18 +1,20 @@
 {
-  "name": "nextn",
+  "name": "perfume-wensite",
   "homepage": "https://sehar113.gitgub.io/perfume-wensite/",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "perdeploy":"npm run build",
-    "depoly":"npm run deploy",
+    "deploy": "gh-pages -d build",
+    "perdeploy": "npm run build",
+    "depoly": "npm run deploy",
     "dev": "next dev --turbopack -p 9002",
     "genkit:dev": "genkit start -- tsx src/ai/dev.ts",
     "genkit:watch": "genkit start -- tsx --watch src/ai/dev.ts",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "export": "next build && next export"
   },
   "dependencies": {
     "@genkit-ai/googleai": "^1.14.1",
@@ -47,11 +49,13 @@
     "embla-carousel-react": "^8.6.0",
     "firebase": "^11.9.1",
     "genkit": "^1.14.1",
-    "gh-pages": "^6.3.0",
+    "gh": "^2.8.9",
+    "git": "^0.1.5",
     "lucide-react": "^0.475.0",
     "next": "15.3.3",
     "next-themes": "^0.3.0",
     "nprogress": "^0.2.0",
+    "pages": "^0.0.16",
     "patch-package": "^8.0.0",
     "react": "^18.3.1",
     "react-day-picker": "^8.10.1",
@@ -68,6 +72,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "genkit-cli": "^1.14.1",
+    "gh-pages": "^6.3.0",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
