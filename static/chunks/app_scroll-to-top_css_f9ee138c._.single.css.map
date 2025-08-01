@@ -2,5 +2,5 @@
   "version": 3,
   "sources": [],
   "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/app/scroll-to-top.css"],"sourcesContent":["\n/* No custom CSS needed if using Tailwind classes directly in the component */\n/* The file is created to be consistent with the plan, but can be left empty */\n/* All styling is handled via Tailwind's `cn` utility in ScrollToTopButton.tsx */\n"],"names":[],"mappings":""}}]
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/app/scroll-to-top.css"],"sourcesContent":["\r\n/* No custom CSS needed if using Tailwind classes directly in the component */\r\n/* The file is created to be consistent with the plan, but can be left empty */\r\n/* All styling is handled via Tailwind's `cn` utility in ScrollToTopButton.tsx */\r\n"],"names":[],"mappings":""}}]
 }
